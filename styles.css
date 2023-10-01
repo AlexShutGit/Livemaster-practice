@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif, Roboto, system-ui, -apple-system, Segoe UI, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  margin: 0;
+  color: black;
+  height: 100vh;
+  background: linear-gradient(40deg, #5172ad 45%, white 45%);
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn-modal{
+  display: flex;
+}
+
+.header, .main, .modal, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  padding: 30px;
+}
+
+.wrapper {
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  border-top: solid #9b9b9b 1px;
+  display: table;
+  height: 0;
+  padding: 30px;
+}
+
+h3 {
+  color: #9b9b9b;
+}
+
+.td {
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 45px;
+}
+
+.tr {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 83.5vw;
+  background-color: white;
+  margin: 1vw;
+}
+
+.button:hover {
+  opacity: 0.25;
+}
+
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10
+}
+
+.modal:target:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  background-color: #f5f6fa;
+  border-radius: 5px;
+  position: fixed;
+  top: -100%;
+  z-index: 11;
+
+}
+
+.modal:target .modal-dialog {
+  transform: translate(0, 0);
+  top: 25%
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-header, .modal-footer {
+  padding: 10px 20px
+}
+
+.modal-header {
+  border-bottom: #9b9b9b solid 1px;
+  font-size: 20px
+}
+
+.btn-close {
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0
+}
+
+.btn-close:hover {
+  color: black;
+  opacity: 50%;
+}
+
+#close {
+  display: none
+}
